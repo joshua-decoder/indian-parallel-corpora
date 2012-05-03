@@ -1,0 +1,87 @@
+Parallel corpora for 6 Indian languages created on Mechanical Turk 
+==================================================================
+
+This directory contains data sets for Bengali, Hindi, Malayalam,
+Tamil, Telugu and Urdu.  Each data set was created by taking around
+100 Indian-language Wikipedia pages and obtaining four independent
+translations of each of the sentences in those documents.  The
+procedure used to create them, along with descriptions of initial
+experiments, is described in:
+
+  "Constructing Parallel Corpora for Six Indian Languages via
+  Crowdsourcing".  2012.  Matt Post, Chris Callison-Burch, and Miles
+  Osborne.  Proceedings of the NAACL Workshop for Statistical Machine
+  Translation (WMT).
+
+The data splits were constructed by manually assigning the documents
+to one of eight categories (Technology, Sex, Language and Culture,
+Religion, Places, People, Events, and Things), and then selecting
+about 10% of the documents in each category for dev, devtest, and test
+data (that is, roughly 30% of the data), and the remaining for
+training data.  Corresponding to each split is a file containing the
+segment ID of each sentence. The segment ID identifies the original
+document ID and the sentence number within that document.  A metadata
+file in each directory matches between document IDs, Wikipedia page
+name, a corresponding English translation, and the manual
+categorization.
+
+The dictionaries were created in a separate MTurk job.  We suggest
+that you append them to the end of your training data when you train
+the translation model (as was done in the paper).
+
+The data files (along with line and word counts) are:
+
+   lines   words file
+   -----   ----- ----
+     913   11352 bn-en/dev.bn-en.bn
+    1083   14615 hi-en/dev.hi-en.hi
+    1142    9096 ml-en/dev.ml-en.ml
+    1680    9221 ta-en/dev.ta-en.ta
+    1260   10186 te-en/dev.te-en.te
+     734   16695 ur-en/dev.ur-en.ur
+
+     907   11614 bn-en/devtest.bn-en.bn
+    1003   25362 hi-en/devtest.hi-en.hi
+    1296   10580 ml-en/devtest.ml-en.ml
+    1185   12933 ta-en/devtest.ta-en.ta
+     920    8464 te-en/devtest.te-en.te
+     783   13427 ur-en/devtest.ur-en.ur
+
+    1002   11959 bn-en/test.bn-en.bn
+    1102   16503 hi-en/test.hi-en.hi
+    1292   10865 ml-en/test.ml-en.ml
+    1230   10374 ta-en/test.ta-en.ta
+    1046    8695 te-en/test.te-en.te
+     601   13294 ur-en/test.ur-en.ur
+
+    6011    7230 bn-en/dict.bn-en.bn
+    6011    9556 bn-en/dict.bn-en.en
+  144505  248987 ml-en/dict.ml-en.en
+  144505  161875 ml-en/dict.ml-en.ml
+   69128  106663 ta-en/dict.ta-en.en
+   69128   82351 ta-en/dict.ta-en.ta
+   38532   63566 te-en/dict.te-en.en
+   38532   43157 te-en/dict.te-en.te
+  113911  115366 ur-en/dict.ur-en.en
+  113911  138322 ur-en/dict.ur-en.ur
+
+   20788  253043 bn-en/training.bn-en.bn
+   20788  286305 bn-en/training.bn-en.en
+   37726  562648 hi-en/training.hi-en.en
+   37726  686548 hi-en/training.hi-en.hi
+   29518  385212 ml-en/training.ml-en.en
+   29518  279633 ml-en/training.ml-en.ml
+   35027  387034 ta-en/training.ta-en.en
+   35027  360410 ta-en/training.ta-en.ta
+   43038  510813 te-en/training.te-en.en
+   43038  441055 te-en/training.te-en.te
+   33798  485371 ur-en/training.ur-en.en
+   33798  713554 ur-en/training.ur-en.ur
+
+Since the data was created by non-expert translators hired over
+Mechanical Turk, it's of mixed quality.  We are currently researching
+ways of improving the quality of the translations that we solicit in
+this way.  However, this data should be enough to get you started
+training models.  You can download it here:
+
+  https://github.com/joshua-decoder/indian-parallel-corpora
