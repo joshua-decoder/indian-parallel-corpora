@@ -31,6 +31,7 @@ Within each directory, you'll find the following files:
        dev.PAIR.{LANG,en.{0,1,2,3},seg_ids}
        devtest.PAIR.{LANG,en.{0,1,2,3},seg_ids}
        test.PAIR.{LANG,en.{0,1,2,3},seg_ids}
+       votes.LANG
 
 The metadata file is organized into rows with four columns each.  The
 rows correspond to the original documents that were translated, and
@@ -53,6 +54,13 @@ categorization.
 The dictionaries were created in a separate MTurk job.  We suggest
 that you append them to the end of your training data when you train
 the translation model (as was done in the paper).
+
+The votes files contain the results from a separate MTurk task wherein
+new Turkers were asked to vote on which of the four translations of a
+given sentence was the best.  We have such information for all languages
+except Malayalam.  The format of the votes file is:
+
+  seg_id num_votes sentence votes [sentence votes ...]
 
 Since the data was created by non-expert translators hired over
 Mechanical Turk, it's of mixed quality.  We are currently researching
