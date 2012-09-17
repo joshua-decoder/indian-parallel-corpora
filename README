@@ -69,3 +69,6 @@ this way.  However, this data should be enough to get you started
 training models.  You can download it here:
 
   http://joshua-decoder.org/indian-parallel-corpora/
+
+In addition, there are some scripts in the scripts/ that manipulate
+the data in various ways.
