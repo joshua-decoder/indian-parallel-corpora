@@ -9,9 +9,12 @@ procedure used to create them, along with descriptions of initial
 experiments, is described in:
 
   "Constructing Parallel Corpora for Six Indian Languages via
-  Crowdsourcing".  2012.  Matt Post, Chris Callison-Burch, and Miles
-  Osborne.  Proceedings of the NAACL Workshop for Statistical Machine
-  Translation (WMT).
+    Crowdsourcing".
+  Matt Post, Chris Callison-Burch, and Miles Osborne
+  Proceedings of the NAACL Workshop for Statistical Machine
+    Translation (WMT). 2012.
+
+The PDF and BibTeX files are in the doc/ directory.
 
 The corpora are organized into directories by language pairs:
 
