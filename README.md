@@ -49,6 +49,6 @@ The format of the votes file is:
 
 Since the data was created by non-expert translators hired over Mechanical Turk, it's of mixed quality.
 However, it should be useful enough to get you started training models.
-You can download it [from Github](https://github.com/joshua-decoder/indian-parallel-corpora)
+You can download it [from Github](https://github.com/joshua-decoder/indian-parallel-corpora).
 
 In addition, there are some scripts in the scripts/ that manipulate the data in various ways.
