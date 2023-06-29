@@ -1,0 +1,15 @@
+These files contain 4+ columns:
+
+- segment ID (docid_sentid)
+- source sentence
+- translated sentence
+- [optional] more translated sentences (up to four total)
+
+Produced by running this in the root directory:
+
+    mkdir -p data
+    for lang in bn hi ml ta te ur; do
+        for prefix in train dev devtest test; do 
+            paste $lang-en/$prefix*seg_ids $lang-en/$prefix*$lang $lang-en/$prefix*.en*; 
+        done | sort -V > data/sorted-by-doc.$lang-en.tsv
+    done
